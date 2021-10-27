@@ -1,5 +1,5 @@
 export const Sport = {
-    NFL: 'NFL',
-    NBA: 'NBA',
-    MLB: 'MLB'
-}
+  NFL: 'NFL',
+  NBA: 'NBA',
+  MLB: 'MLB',
+};

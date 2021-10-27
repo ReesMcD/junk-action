@@ -8,22 +8,20 @@ import { selectCurrentSport } from '../store/selector/navigation.selectors';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit {
-
-  selectedSport$: Observable<string>
+  selectedSport$: Observable<string>;
   sports = Sport;
 
   constructor(private store: Store<NavigationState>) {
-    this.selectedSport$ = this.store.pipe(select(selectCurrentSport))
+    this.selectedSport$ = this.store.pipe(select(selectCurrentSport));
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   changeSport(event: any) {
-    const sport = event.target.value 
+    const sport = event.target.value;
     this.store.dispatch(changeSport(sport));
   }
 }

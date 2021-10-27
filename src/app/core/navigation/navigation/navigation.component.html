@@ -1,29 +1,41 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" routerLink="/">
-            <div class="is-size-3">junk action</div><sup>beta</sup>
-        </a>
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="/">
+      <div class="is-size-3">junk action</div>
+      <sup>beta</sup>
+    </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/charts">charts</a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" routerLink="/charts">charts</a>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="select">
+          <select (change)="changeSport($event)">
+            <option
+              *ngFor="let sport of sports | keyvalue"
+              [selected]="sport.value == (selectedSport$ | async)"
+            >
+              {{ sport.value }}
+            </option>
+          </select>
         </div>
-
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="select">
-                    <select (change)="changeSport($event)">
-                        <option *ngFor="let sport of sports | keyvalue" [selected]="sport.value == (selectedSport$ | async)">{{sport.value}}</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </nav>

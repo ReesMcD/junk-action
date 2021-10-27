@@ -1,17 +1,18 @@
-import {
-  ActionReducerMap,
-  MetaReducer
-} from '@ngrx/store';
+import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { environment } from '../../../environments/environment';
-import { NavigationState, reducer } from '../navigation/store/reducer/navigation.reducer';
-
+import {
+  NavigationState,
+  reducer,
+} from '../navigation/store/reducer/navigation.reducer';
 
 export interface State {
-  navigation: NavigationState
+  navigation: NavigationState;
 }
 
 export const reducers: ActionReducerMap<State> = {
-  navigation: reducer
+  navigation: reducer,
 };
 
-export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
+export const metaReducers: MetaReducer<State>[] = !environment.production
+  ? []
+  : [];
