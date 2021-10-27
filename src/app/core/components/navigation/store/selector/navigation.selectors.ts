@@ -1,11 +1,11 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { Features } from 'src/app/core/models/features';
 import {
   NavigationState,
-  navigationFeatureKey,
 } from '../reducer/navigation.reducer';
 
 export const selectNavigationState =
-  createFeatureSelector<NavigationState>(navigationFeatureKey);
+  createFeatureSelector<NavigationState>(Features.Navigation);
 
 export const selectCurrentSport = createSelector(
   selectNavigationState,

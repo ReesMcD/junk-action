@@ -1,8 +1,6 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { changeXAxis, changeYAxis } from '../action/charts.actions';
 
-export const chartsFeatureKey = 'charts';
-
 export interface ChartsState {
   xAxis: string;
   yAxis: string;

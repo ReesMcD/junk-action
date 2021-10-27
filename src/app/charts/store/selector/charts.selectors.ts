@@ -1,8 +1,9 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { chartsFeatureKey, ChartsState } from '../reducer/charts.reducer';
+import { Features } from 'src/app/core/models/features';
+import { ChartsState } from '../reducer/charts.reducer';
 
 export const selectChartState =
-  createFeatureSelector<ChartsState>(chartsFeatureKey);
+  createFeatureSelector<ChartsState>(Features.Charts);
 
 export const selectCurrentSport = createSelector(
   selectChartState,
