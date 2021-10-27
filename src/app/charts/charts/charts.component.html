@@ -2,16 +2,18 @@
   <div>Charts: {{ selectedSport$ | async }}</div>
   <p>X Axis</p>
   <div class="select">
-    <select>
-      <option>PPG</option>
-      <option>Usage</option>
+    <select (change)="changeXAxis($event)">
+      <option *ngFor="let axis of axes">
+        {{ axis }}
+      </option>
     </select>
   </div>
   <p>Y Axis</p>
   <div class="select">
-    <select>
-      <option>PPG</option>
-      <option>Usage</option>
+    <select (change)="changeYAxis($event)">
+      <option *ngFor="let axis of axes">
+        {{ axis }}
+      </option>
     </select>
   </div>
 </ng-container>

@@ -23,7 +23,6 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {}
 
   changeSport(event: any) {
-    const sport = event.target.value;
-    this.store.dispatch(changeSport(sport));
+    this.store.dispatch(changeSport(event.target.value));
   }
 }
