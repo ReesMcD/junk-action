@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChartsComponent } from './analysis/components/charts/charts.component';
+import { ChartsComponent } from '../charts/charts/charts.component';
 
 const routes: Routes = [{ path: 'charts', component: ChartsComponent }];
 

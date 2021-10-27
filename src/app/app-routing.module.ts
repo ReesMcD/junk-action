@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./analysis/analysis.module').then((m) => m.AnalysisModule),
+      import('./charts/charts.module').then((m) => m.ChartsModule),
   },
 ];
 
