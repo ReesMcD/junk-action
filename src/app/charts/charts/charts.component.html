@@ -3,7 +3,7 @@
   <p>X Axis</p>
   <div class="select">
     <select (change)="changeXAxis($event)">
-      <option *ngFor="let axis of axes">
+      <option *ngFor="let axis of (chartState$ | async)?.axes" [selected]="axis == (chartState$ | async)?.xAxis">
         {{ axis }}
       </option>
     </select>
@@ -11,7 +11,7 @@
   <p>Y Axis</p>
   <div class="select">
     <select (change)="changeYAxis($event)">
-      <option *ngFor="let axis of axes">
+      <option *ngFor="let axis of (chartState$ | async)?.axes" [selected]="axis == (chartState$ | async)?.yAxis">
         {{ axis }}
       </option>
     </select>

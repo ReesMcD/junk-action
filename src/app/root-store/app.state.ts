@@ -1,6 +1,6 @@
-import { ChartsState } from '../charts/store/reducer/charts.reducer';
+import { ChartsState } from '../charts/models/chart.state';
 import { NavigationState } from '../core/components/navigation/store/reducer/navigation.reducer';
-import { Features } from '../core/models/features';
+import { Features } from '../core/models/features.enum';
 
 export interface AppState {
   [Features.Navigation]: NavigationState;

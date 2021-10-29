@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-// import { metaReducers } from '../core/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../../environments/environment';
 import { ChartsStoreModule } from '../charts/store/charts-store.module';
@@ -12,6 +12,7 @@ import { NavigationStoreModule } from '../core/components/navigation/store/navig
     NavigationStoreModule,
     ChartsStoreModule,
     StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   providers: [],

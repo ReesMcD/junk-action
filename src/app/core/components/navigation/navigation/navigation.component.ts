@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { AppRoutes } from 'src/app/core/models/routes';
-import { Sport } from 'src/app/core/models/sport';
+import { AppRoutes } from 'src/app/core/models/routes.enum';
+import { Sport } from 'src/app/core/models/sport.enum';
 import { AppState } from 'src/app/root-store/app.state';
 import { changeSport } from '../store/action/navigation.actions';
 import { selectCurrentSport } from '../store/selector/navigation.selectors';

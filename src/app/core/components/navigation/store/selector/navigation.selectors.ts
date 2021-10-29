@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { Features } from 'src/app/core/models/features';
+import { Features } from 'src/app/core/models/features.enum';
 import {
   NavigationState,
 } from '../reducer/navigation.reducer';

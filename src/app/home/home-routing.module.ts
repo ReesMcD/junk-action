@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppRoutes } from '../core/models/routes';
+import { AppRoutes } from '../core/models/routes.enum';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [{ path: AppRoutes.Home, component: HomeComponent }];

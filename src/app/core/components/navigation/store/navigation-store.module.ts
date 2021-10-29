@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
-import { Features } from 'src/app/core/models/features';
+import { Features } from 'src/app/core/models/features.enum';
 import {
   navigationReducerWrapper,
 } from './reducer/navigation.reducer';
